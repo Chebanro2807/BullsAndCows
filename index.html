@@ -11,24 +11,35 @@
     <script src="index.js" defer></script>
 </head>
 <body>
+    <!-- Game -------------------------------------------------->
+
     <div class="bulls_and_cows">
         <div class="vrap_button__start">
             <button class="button__start">Start</button>
         </div>
         <div class="table_vrap"></div>
-        <table class="bulls_and_cows_table" border="0" cellpadding="1"> <!-- Пока что с одни юзером. -->
+        <table class="bulls_and_cows_table" border="0" cellpadding="1">
             <tr class="line_1">
-                <td class="random__number"></td> <!-- Загаданое число -->
+                <td class="random__number"></td>
                 <td class="User1" colspan="3">Player1</td>
-               </tr>
-               <tr class="line_2">
+            </tr>
+            <tr class="line_2">
                 <td class="turns">Ход</td>
                 <td class="numbers">Число</td>
                 <td class="bulls_and_cows"><img class="bull" src="../bulls_and_cows/img/bull.svg" alt="Bull"></td>
                 <td class="bulls_and_cows"><img class="cow" src="../bulls_and_cows/img/cow.svg" alt="cow"></td>
-              </tr>
+            </tr>
         </table>
     </div>
+
+    <!-- Modal Srart Game ------------------------------------------->
+
+    <div class="start">
+        <div class="start__menu">
+            <img class="start__bc-logo" src="img/start/bc_logo.png">
+            <img class="start__btn" src="img/start/rules.png">
+            <img class="start__btn" src="img/start/play.png">
+        </div>
     </div>
 </body>
 </html>

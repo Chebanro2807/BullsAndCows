@@ -1,6 +1,5 @@
 function BullsAndCows (props = {}){
     this._props = props;
-    // console.log(this._string)
     this.createField()
     this.startGame = document.querySelector('.button__start');
     this.startGame.addEventListener('click',this.start.bind(this));
@@ -17,7 +16,7 @@ BullsAndCows.prototype.randomNumberToString = function() {
         this._string = `${this.randomNumber().toString().padStart(4, '0')}`;
     } while(!this.verification(this._string));
 }
- 
+
 BullsAndCows.prototype.render = function() {
     if (this._props.container){
         this._props.container.innerText = this._string;
@@ -101,8 +100,6 @@ BullsAndCows.prototype.createInputNumber = function (){
     let createInput = document.createElement('input')
     createInput.setAttribute('size',2);
     createInput.setAttribute('maxlength',4)
-    // createInput.setAttribute('autofocus',0)
-    // createInput.setAttribute('pattern','[0-9]{4}') // Разобраться с данным свойством немного позже. 
     createInput.addEventListener('keypress', (event) => {
         if (event.keyCode ===13) {
             event.preventDefault()
