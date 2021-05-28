@@ -127,30 +127,33 @@ table {
 
 /* Game start */
 
-.start {
-    display: none;
+.bg-modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(img/start/bg-start.jpg);
+    background-image: url(img/modals/bg-start.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.start {
+    display: none;
 }
 
 .start__menu {
     margin: 150px auto 0 auto;
     width: 540px;
     height: 430px;
-    background-image: url(img/start/bg-menu.png);
+    background-image: url(img/modals/bg-menu.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.start__bc-logo{
+.bc-logo{
     display: block;
     margin: 0px auto;
     padding-top: 15px;
@@ -158,10 +161,206 @@ table {
     height: 195px;
 }
 
-.start__btn {
+.btn {
     display: block;
     margin: 0 auto;
     margin-top: 15px;
     width: 250px;
     height: 80px;
+    cursor: pointer;
+}
+
+.btn img,
+.bc-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Rules */
+
+.rules__menu {
+    margin: 150px auto 0 auto;
+    width: 700px;
+    height: 615px;
+    background-image: url(img/modals/rules_mebu-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.rules__text {
+    width: 550px;
+    height: 265px;
+    margin: 0px auto;
+}
+
+.rules__text p {
+    text-align: justify;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    padding: 10px 20px 0px 20px;
+    color: white;
+}
+
+.rules__text p:last-child {
+    text-align: center;
+    font-weight: 700;
+    font-size: 33px;
+}
+
+.rules {
+    display: none;
+}
+
+/* Win */
+
+.win {
+    display: none;
+}
+
+.win__menu {
+    margin: 150px auto 0 auto;
+    width: 650px;
+    height: 445px;
+    background-image: url(img/modals/win_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.win__logo {
+    padding-top: 50px;
+    height: 140px;
+    width: 500px;
+}
+
+.win__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 470px;
+    height: 60px;
+    margin: 25px auto;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    color: white;
+}
+
+.number {
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.win__btn {
+    margin-top: 30px;
+    width: 375px;
+    height: 100px;
+}
+
+/* Lose */
+
+.lose__menu {
+    margin: 150px auto 0 auto;
+    width: 650px;
+    height: 445px;
+    background-image: url(img/modals/win_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.lose__logo {
+    padding-top: 50px;
+    height: 140px;
+    width: 500px;
+}
+
+.lose__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 470px;
+    height: 60px;
+    margin: 25px auto;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    color: white;
+}
+
+.number {
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.lose__btn {
+    margin-top: 30px;
+    width: 375px;
+    height: 100px;
+}
+
+.lose {
+    display: none;
+}
+
+/* Error */
+
+.error {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.error__menu {
+    margin: 150px auto 0 auto;
+    width: 815px;
+    height: 450px;
+    background-image: url(img/modals/continue_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.error__text {
+    margin: 0px auto;
+    width: 625px;
+    height: 220px;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    padding: 85px 20px 0px 20px;
+    color: white;
+}
+
+.error__text p {
+    margin: 0px auto;
+    text-align: center;
+    width: 450px;
+}
+
+.error__text-er {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.error__text-ex {
+    padding-top: 50px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.error__btn {
+    margin-top: 32px;
 }

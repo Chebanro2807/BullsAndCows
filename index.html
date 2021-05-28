@@ -8,6 +8,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
     </style>
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="index.js" defer></script>
 </head>
 <body>
@@ -26,19 +29,66 @@
             <tr class="line_2">
                 <td class="turns">Ход</td>
                 <td class="numbers">Число</td>
-                <td class="bulls_and_cows"><img class="bull" src="../bulls_and_cows/img/bull.svg" alt="Bull"></td>
-                <td class="bulls_and_cows"><img class="cow" src="../bulls_and_cows/img/cow.svg" alt="cow"></td>
+                <td class="bulls_and_cows"><img class="bull" src="img/bull.svg" alt="bull"></td>
+                <td class="bulls_and_cows"><img class="cow" src="img/cow.svg" alt="cow"></td>
             </tr>
         </table>
     </div>
 
     <!-- Modal Srart Game ------------------------------------------->
 
-    <div class="start">
+    <div class="start bg-modal">
         <div class="start__menu">
-            <img class="start__bc-logo" src="img/start/bc_logo.png">
-            <img class="start__btn" src="img/start/rules.png">
-            <img class="start__btn" src="img/start/play.png">
+            <div class="start__bc-logo bc-logo"><img src="img/modals/bc_logo.png"></div>
+            <div class="start__btn btn"><img src="img/modals/rules.png"></div>
+            <div class="start__btn btn"><img src="img/modals/play.png"></div>
+        </div>
+    </div>
+
+    <!-- Modal Rules ------------------------------------------->
+
+    <div class="rules bg-modal">
+        <div class="rules__menu">
+            <div class="bc-logo"><img src="img/modals/bc_logo.png"></div>
+            <div class="rules__text">
+                <p>On a game, computers write a 4-digit secret numbers. The digits all different. Then you try to guess what numbers hidden. If the matching digits are in their right positions, they are "bulls", if in different positions, they are "cows".</p>
+                <p>Good luck!</p>
+            </div>
+            <div class="rules__btn btn"><img src="img/modals/play.png"></div>
+        </div>
+    </div>
+
+    <!-- Modal Win ------------------------------------------->
+
+    <div class="win bg-modal">
+        <div class="win__menu">
+            <div class="bc-logo win__logo"><img src="img/modals/win_logo.png"></div>
+            <p class="win__text">Hidden number:<span class="number">0000</span></p>
+            <div class="win__btn btn"><img src="img/modals/play_again.png"></div>
+        </div>
+    </div>
+
+    <!-- Modal Lose ------------------------------------------->
+
+    <div class="lose bg-modal">
+        <div class="lose__menu">
+            <div class="bc-logo lose__logo"><img src="img/modals/lose_logo.png"></div>
+            <p class="lose__text">Hidden number:<span class="number">0000</span></p>
+            <div class="lose__btn btn"><img src="img/modals/play_again.png"></div>
+        </div>
+    </div>
+
+    <!-- Modal Error ------------------------------------------->
+
+    <div class="error">
+        <div class="error__menu">
+            <div class="error__text">
+                <p class="error__text-er">ERROR</p>
+                <p>You have repeating numbers or using letters.</p>
+                <p class="error__text-ex">Example</p>
+                <p>1234 - correct</p>
+            </div>
+            <div class="error__btn btn"><img src="img/modals/continue.png"></div>
         </div>
     </div>
 </body>
