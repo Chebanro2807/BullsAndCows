@@ -1,131 +1,19 @@
 body {
-    width: 100%;
     margin: 0px;
 }
 
-
  /* Game */
-.cow{
-    width: 35px;
-    height: 35px;
-}
 
-.bull{
-    width: 35px;
-    height: 35px;
-}
-
-.bulls_and_cows{
-    min-width: 50px;
-}
-
-.User1 {
-    text-align: center;
-    font-weight: bold;
-}
-
-.table_vrap{
-    padding-top: 20px;
-    width: 400px;
-    border: 0px;
-}
-
-.button__start {
-    background-color: rgb(130, 219, 241);
-}
-
-.bulls_and_cows_table {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.vrap_button__start{
-    text-align: center;
-}
-
-.button__start{
-    text-decoration: none;
-    display: inline-block;
-    color: white;
-    padding: 6px 30px;
-    margin: 10px 20px;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    background-image: linear-gradient(to right, #f0a249 0%, #da6e0a 51%, #f0a249 100%);
-    background-size: 200% auto;
-    transition: .5s;
-    border: none;
-}
-
-.button__start:focus {
-    outline: none !important
-}
-
-.button__start:hover {
-    background-position: right center;
-    border: none;
-}
-
-.turn {
-    text-align: center;
-}
-
-.numbers {
-    text-align: center;
-    font-weight: bold;
-}
-
-.number_all {
-    height: 30px;
-    width: 80px;
-    text-align: center;
-}
-
-.random__number{
-    width: 50px;
-    text-align: center;
-}
-
-.turns {
-    text-align: center;
-    font-weight: bold;
-}
-
-.bulls_all{
-    text-align: center;
-    width: 67px;
-}
-
-.cows_all{
-    text-align: center;
-    width: 67px;
-}
-
-table {
-    font-family: 'Montserrat', Sans-Serif;
-    font-size: 14px;
-    border-collapse: collapse;
-    text-align: center;
-    }
-    th, td:first-child {
-    background:#d3853b ;
-    color: white;
-    padding: 10px 20px;
-    }
-    th, td {
-    border-style: solid;
-    border-width: 0 1px 1px 0;
-    border-color: white;
-    }
-    td {
-    background: #ffe0b3;
-    }
-
-.line_1 {
-    height: 40px;
+.lines {
+    display: flex;
 }
 
 /* Game start */
+
+.start {
+    transform: scale(0);
+    visibility: hidden;
+}
 
 .bg-modal {
     position: fixed;
@@ -137,10 +25,6 @@ table {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
-
-.start {
-    display: none;
 }
 
 .start__menu {
@@ -211,13 +95,15 @@ table {
 }
 
 .rules {
-    display: none;
+    transform: scale(0);
+    visibility: hidden;
 }
 
 /* Win */
 
 .win {
-    display: none;
+    transform: scale(0);
+    visibility: hidden;
 }
 
 .win__menu {
@@ -307,13 +193,15 @@ table {
 }
 
 .lose {
-    display: none;
+    transform: scale(0);
+    visibility: hidden;
 }
 
 /* Error */
 
 .error {
-    display: none;
+    transform: scale(0);
+    visibility: hidden;
     position: fixed;
     top: 0;
     left: 0;
@@ -363,4 +251,9 @@ table {
 
 .error__btn {
     margin-top: 32px;
+}
+
+.is-show{
+    transform: scale(1);
+    visibility: visible;
 }

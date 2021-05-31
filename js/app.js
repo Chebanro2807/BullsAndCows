@@ -1,0 +1,1 @@
+const bullsAndCowsGame = new BullsAndCows ()

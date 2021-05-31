@@ -1,11 +1,48 @@
 function BullsAndCows (props = {}){
     this._props = props;
     this.createField()
-    this.startGame = document.querySelector('.button__start');
-    this.startGame.addEventListener('click',this.start.bind(this));
+    this.startGame = document.querySelectorAll('.js-start');
+    this.startGame.forEach((el) => {
+        el.addEventListener('click',this.start.bind(this));
+    })
     this._currentTurn = 0;
     this._winGame = false;
+
+    this.imgArray = document.querySelectorAll('.js-open-modal');
+    this.imgArray.forEach((item)=>{
+        item.addEventListener('click', this.modalShow.bind(this, item))
+    });
+
+    this.error = document.querySelector('.error')
+    this.continueBtn = document.querySelector('.error__btn');
+    this.continueBtn.addEventListener('click', this.continue.bind(this))
 }
+
+//  working with modals
+
+BullsAndCows.prototype.continue = function () {
+    this.error.classList.remove('is-show');
+}
+
+BullsAndCows.prototype.modalShow = function (item) {
+    event.preventDefault();
+    this.showModal(item);
+}
+
+BullsAndCows.prototype.showModal = function (item) {
+    this.hideAllModal();
+    modalName = item.getAttribute('data-modal');
+    modal = document.querySelector('.js-modal[data-modal="' + modalName + '"]');
+    modal.classList.add('is-show');
+}
+
+BullsAndCows.prototype.hideAllModal = function () {
+    allShowArr = document.querySelectorAll('.is-show');
+    allShowArr.forEach((e)=>{
+        e.classList.remove('is-show');
+    });
+}
+
 // Generate field
 BullsAndCows.prototype.randomNumber = function (){
     return Math.round(Math.random() * (10000 - 100)) + 100;
@@ -17,11 +54,12 @@ BullsAndCows.prototype.randomNumberToString = function() {
     } while(!this.verification(this._string));
 }
 
-BullsAndCows.prototype.render = function() {
-    if (this._props.container){
-        this._props.container.innerText = this._string;
-        console.log(this._string)
-    }
+BullsAndCows.prototype.render = function () {
+    let numberToGes = document.querySelectorAll('.js-number')
+    numberToGes.forEach((elem) => {
+        elem.innerText = this._string;
+    })
+    console.log(this._string)
 }
 
 BullsAndCows.prototype.verification = function (check){
@@ -75,16 +113,16 @@ BullsAndCows.prototype.start = function() {
 
 BullsAndCows.prototype.createField = function () {
     for (let i=0; i<10; i++){
-        let row = document.createElement('tr');
+        let row = document.createElement('div');
         row.className = 'lines';
-        let columnTurn = document.createElement('td');
+        let columnTurn = document.createElement('div');
         columnTurn.className = 'turn';
         columnTurn.innerHTML = i+1;
-        let columnNumber = document.createElement('td');
+        let columnNumber = document.createElement('div');
         columnNumber.classList = 'number_all number_'+(i); // Добавлял общие классы для все колонок
-        let columnBull = document.createElement('td');
+        let columnBull = document.createElement('div');
         columnBull.className = 'bulls_all bull_'+(i);
-        let columnCow = document.createElement('td');
+        let columnCow = document.createElement('div');
         columnCow.className = 'cows_all cow_'+(i);
         row.append(columnTurn);
         row.append(columnNumber);
@@ -108,10 +146,10 @@ BullsAndCows.prototype.createInputNumber = function (){
                 createInput.setAttribute('disabled','disabled')
                 this.checkBullsAndCows(createInput.value);
                 if (this._winGame){
-                    alert('You win')
+                    win = document.querySelector('.win').classList.add('is-show');
                     this.render();
                 } else if (this._currentTurn===9){
-                    alert('Ты нубас')
+                    lose = document.querySelector('.lose').classList.add('is-show');
                     this.render();
                 }
                 else {
@@ -119,7 +157,7 @@ BullsAndCows.prototype.createInputNumber = function (){
                     this.createInputNumber();
                 }
             } else {
-                alert('У вас повторяються цыфры. \n"1234" => Правильно, \n"1123" =>  Не верно. В данном случае дважди повторилось "1 и 1"')
+                this.error.classList.add('is-show');
             }
         }
     });
@@ -127,8 +165,6 @@ BullsAndCows.prototype.createInputNumber = function (){
     cellNumberTd.append(createInput);
     createInput.focus();
 }
-
-
 
 BullsAndCows.prototype.fieldClean = function() {
     for (let i=0; i<=this._currentTurn; i++){
@@ -140,18 +176,13 @@ BullsAndCows.prototype.fieldClean = function() {
         cleanBull.innerHTML = '';
         let cleanCow = document.querySelector('.cow_'+i);
         cleanCow.innerHTML = '';
-        let cleanRandomNumber = document.querySelector('.random__number')
-        cleanRandomNumber.innerHTML = '';
+        let cleanRandomNumber = document.querySelectorAll('.js-number')
+        cleanRandomNumber.forEach((elem) => {
+            elem.innerHTML = '';
+        })
     }
-    this._props.container.innerText = '';
 }
 
-
-
-//------
-const bullsAndCowsGame = new BullsAndCows ({
-    container: document.querySelector('.random__number')
-})
 
 
 
