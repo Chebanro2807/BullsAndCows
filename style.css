@@ -4,8 +4,126 @@ body {
 
  /* Game */
 
+.game-bc__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 200px 0px 200px;
+}
+
+.game-bc__logo,
+.game-bc__logo img {
+    width: 240px;
+    height: 115px;
+}
+
+.bulls_and_cows_table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-bc__step {
+    text-align: justify;
+    margin: 0px;
+    font-family: 'Londrina Solid', cursive;
+    font-size: 35px;
+    font-weight: 400;
+    padding: 10px 20px 0px 20px;
+    color: #a85c08;
+    text-transform: uppercase;
+}
+
+.game-bc__big-nubers {
+    font-size: 50px;
+}
+
+.game-bc__text {
+    display: flex;
+    align-items: center;
+    margin: 0px auto;
+    width: 400px;
+    height: 35px;
+    font-family: 'Suez One', serif;
+    color: #a85c08;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.game-bc__text p{
+    margin: 0px;
+}
+
+.game-bc__text p:nth-child(2){
+    margin-left: 32px;
+}
+
+.game-bc__text p:nth-child(3){
+    margin-left: 11px;
+}
+
 .lines {
     display: flex;
+    background-image: url(img/modals/turn-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 500px;
+    height: 60px;
+}
+
+.turn {
+    margin-top: 13px;
+    margin-left: 15px;
+    width: 55px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Suez One', serif;
+    color: #a85c08;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.number_all {
+    margin-top: 15px;
+    margin-left: 8px;
+    width: 160px;
+    height: 20px;
+}
+
+.number_all input {
+    width: 100%;
+    height: 100%;
+    font-family: 'Suez One', serif;
+    color: #a85c08;
+    font-size: 23px;
+    border: 0px;
+    background-color: #f6f6c5;
+    text-align: center;
+}
+
+.number_all input:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.bulls_all,
+.cows_all {
+    margin-top: 14px;
+    margin-left: 30px;
+    width: 35px;
+    height: 25px;
+    font-family: 'Suez One', serif;
+    color: #a85c08;
+    font-size: 23px;
+    background-color: #f6f6c5;
+    text-align: center;
+}
+
+.cows_all {
+    margin-left: 22px;
 }
 
 /* Game start */

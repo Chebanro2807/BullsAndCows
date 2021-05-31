@@ -7,6 +7,7 @@ function BullsAndCows (props = {}){
     })
     this._currentTurn = 0;
     this._winGame = false;
+    this._turn = document.querySelector('.game-bc__turn');
 
     this.imgArray = document.querySelectorAll('.js-open-modal');
     this.imgArray.forEach((item)=>{
@@ -153,7 +154,9 @@ BullsAndCows.prototype.createInputNumber = function (){
                     this.render();
                 }
                 else {
+
                     this._currentTurn++;
+                    this._turn.innerHTML = this._currentTurn+1;
                     this.createInputNumber();
                 }
             } else {
@@ -180,6 +183,7 @@ BullsAndCows.prototype.fieldClean = function() {
         cleanRandomNumber.forEach((elem) => {
             elem.innerHTML = '';
         })
+        this._turn.innerHTML = 1;
     }
 }
 
