@@ -4,6 +4,10 @@ body {
 
  /* Game */
 
+.game-bc{
+    overflow-x: scroll;
+}
+
 .game-bc__top {
     display: flex;
     justify-content: space-between;
@@ -64,7 +68,7 @@ body {
 
 .lines {
     display: flex;
-    background-image: url(img/modals/turn-bg.png);
+    background-image: url(../img/modals/turn-bg.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -100,7 +104,7 @@ body {
     color: #a85c08;
     font-size: 23px;
     border: 0px;
-    background-color: #f6f6c5;
+    background-color: inherit;
     text-align: center;
 }
 
@@ -126,6 +130,33 @@ body {
     margin-left: 22px;
 }
 
+.accept {
+    margin-top: 12px;
+    margin-left: 14px;
+    width: 100px;
+    height: 30px;
+}
+
+.accept_img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.failed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-family: 'Suez One', serif;    
+    font-size: 23px;
+    color: white;
+    background-color: inherit;
+    text-shadow: #a85c08 1px 1px 0, #a85c08 -1px -1px 0, 
+    #a85c08 -1px 1px 0, #a85c08 1px -1px 0;
+}
+
 /* Game start */
 
 .start {
@@ -139,7 +170,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(img/modals/bg-start.jpg);
+    background-image: url(../img/modals/bg-start.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -149,7 +180,7 @@ body {
     margin: 150px auto 0 auto;
     width: 540px;
     height: 430px;
-    background-image: url(img/modals/bg-menu.png);
+    background-image: url(../img/modals/bg-menu.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -182,9 +213,9 @@ body {
 
 .rules__menu {
     margin: 150px auto 0 auto;
-    width: 700px;
+    width: 750px;
     height: 615px;
-    background-image: url(img/modals/rules_mebu-bg.png);
+    background-image: url(../img/modals/rules_mebu-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -227,8 +258,8 @@ body {
 .win__menu {
     margin: 150px auto 0 auto;
     width: 650px;
-    height: 445px;
-    background-image: url(img/modals/win_bg.png);
+    height: 460px;
+    background-image: url(../img/modals/win_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -246,7 +277,7 @@ body {
     justify-content: center;
     width: 470px;
     height: 60px;
-    margin: 25px auto;
+    margin: 32px auto;
     text-align: justify;
     font-family: 'Roboto', sans-serif;
     font-size: 35px;
@@ -272,7 +303,7 @@ body {
     margin: 150px auto 0 auto;
     width: 650px;
     height: 445px;
-    background-image: url(img/modals/win_bg.png);
+    background-image: url(../img/modals/win_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -332,7 +363,7 @@ body {
     margin: 150px auto 0 auto;
     width: 815px;
     height: 450px;
-    background-image: url(img/modals/continue_bg.png);
+    background-image: url(../img/modals/continue_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -374,4 +405,8 @@ body {
 .is-show{
     transform: scale(1);
     visibility: visible;
+}
+
+.play-main img{
+    height: 70%;
 }

@@ -23,6 +23,7 @@ function BullsAndCows (props = {}){
 
 BullsAndCows.prototype.continue = function () {
     this.error.classList.remove('is-show');
+    this.cellNumberTd.firstChild.focus();
 }
 
 BullsAndCows.prototype.modalShow = function (item) {
@@ -60,7 +61,6 @@ BullsAndCows.prototype.render = function () {
     numberToGes.forEach((elem) => {
         elem.innerText = this._string;
     })
-    console.log(this._string)
 }
 
 BullsAndCows.prototype.verification = function (check){
@@ -89,7 +89,6 @@ BullsAndCows.prototype.checkBullsAndCows = function (usernumber) {
             bulls++
         }
     }
-    console.log('быки =', bulls, 'коровы =',cows)
     this.drow(bulls, cows);
     
     if (bulls === 4){
@@ -125,17 +124,25 @@ BullsAndCows.prototype.createField = function () {
         columnBull.className = 'bulls_all bull_'+(i);
         let columnCow = document.createElement('div');
         columnCow.className = 'cows_all cow_'+(i);
+        let columnAccept = document.createElement('div');
+        columnAccept.className = 'accept accept_'+(i);
         row.append(columnTurn);
         row.append(columnNumber);
         row.append(columnBull);
         row.append(columnCow);
+        row.append(columnAccept);
         let createTable = document.querySelector('.bulls_and_cows_table');
         createTable.append(row);
     }
 }
 
+BullsAndCows.prototype.createAccept = function () {
+    let acceptWrap = document.querySelector('.accept_'+this._currentTurn);
+    let accept = document.createElement('button')
+}
+
 BullsAndCows.prototype.createInputNumber = function (){
-    let cellNumberTd = document.querySelector('.number_'+this._currentTurn);
+    this.cellNumberTd = document.querySelector('.number_'+this._currentTurn);
     let createInput = document.createElement('input')
     createInput.setAttribute('size',2);
     createInput.setAttribute('maxlength',4)
@@ -154,18 +161,52 @@ BullsAndCows.prototype.createInputNumber = function (){
                     this.render();
                 }
                 else {
-
+                    this.acceptWrap.removeChild(this.acceptWrap.firstChild);
+                    this.acceptWrap.append(fail);
                     this._currentTurn++;
                     this._turn.innerHTML = this._currentTurn+1;
                     this.createInputNumber();
                 }
             } else {
                 this.error.classList.add('is-show');
+                createInput.value = '';
             }
         }
     });
 
-    cellNumberTd.append(createInput);
+    this.acceptWrap = document.querySelector('.accept_'+this._currentTurn);
+    let accept = document.createElement('img');
+    accept.setAttribute("src", "img/modals/apply.png")
+    accept.className = 'accept_img';
+    let fail = document.createElement('div');
+    fail.className = 'failed';
+    fail.innerHTML = 'FAILED';
+    accept.addEventListener('click', () => {
+        if (this.verification(createInput.value)) {
+            createInput.setAttribute('disabled','disabled');
+            this.checkBullsAndCows(createInput.value);
+            if (this._winGame){
+                win = document.querySelector('.win').classList.add('is-show');
+                this.render();
+            } else if (this._currentTurn===9){
+                lose = document.querySelector('.lose').classList.add('is-show');
+                this.render();
+            }
+            else {
+                this.acceptWrap.removeChild(this.acceptWrap.firstChild);
+                this.acceptWrap.append(fail);
+                this._currentTurn++;
+                this._turn.innerHTML = this._currentTurn+1;
+                this.createInputNumber();
+            }
+        } else {
+            this.error.classList.add('is-show');
+            createInput.value = '';
+        }
+    });
+
+    this.acceptWrap.append(accept);
+    this.cellNumberTd.append(createInput);
     createInput.focus();
 }
 
@@ -175,18 +216,18 @@ BullsAndCows.prototype.fieldClean = function() {
         while (cleanNumber.firstChild){
             cleanNumber.removeChild(cleanNumber.firstChild);
         }
+        let cleanAccept = document.querySelector('.accept_'+i);
+        while (cleanAccept.firstChild){
+            cleanAccept.removeChild(cleanAccept.firstChild);
+        }
         let cleanBull = document.querySelector('.bull_'+i);
         cleanBull.innerHTML = '';
         let cleanCow = document.querySelector('.cow_'+i);
         cleanCow.innerHTML = '';
-        let cleanRandomNumber = document.querySelectorAll('.js-number')
-        cleanRandomNumber.forEach((elem) => {
-            elem.innerHTML = '';
-        })
         this._turn.innerHTML = 1;
     }
+    let cleanRandomNumber = document.querySelectorAll('.js-number')
+    cleanRandomNumber.forEach((elem) => {
+        elem.innerHTML = '';
+    })
 }
-
-
-
-

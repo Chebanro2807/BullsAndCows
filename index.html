@@ -7,7 +7,8 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
     </style>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/media.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -20,22 +21,6 @@
     <!-- Game -------------------------------------------------->
 
     <div class="game-bc modal js-modal bg-modal" data-modal="play">
-        <!-- <div class="wrap_button__start">
-            <button class="button__start js-start">Start</button>
-        </div>
-        <div class="table_vrap"></div>
-        <table class="bulls_and_cows_table" border="0" cellpadding="1">
-            <tr class="line_1">
-                <td class="random__number"></td>
-                <td class="User1" colspan="3">Player1</td>
-            </tr>
-            <tr class="line_2">
-                <td class="turns">Ход</td>
-                <td class="numbers">Число</td>
-                <td class="bulls_and_cows"><img class="bull" src="img/bull.svg" alt="bull"></td>
-                <td class="bulls_and_cows"><img class="cow" src="img/cow.svg" alt="cow"></td>
-            </tr>
-        </table> -->
         <div class="game-bc__top">
             <div class="game-bc__logo"><img src="img/modals/bc_logo.png"></div>
             <pre class="game-bc__step">Step  <span class="game-bc__turn game-bc__big-nubers">1</span>  of <span class="game-bc__big-nubers">10</span></pre>
@@ -46,7 +31,7 @@
             <p>Cows</p>
         </div>
         <div class="bulls_and_cows_table"></div>
-        <div class="btn js-open-modal js-start" data-modal="play"><img src="img/modals/play_again.png"></div>
+        <div class="play-main btn js-open-modal js-start" data-modal="play"><img src="img/modals/play_again.png"></div>
     </div>
 
     <!-- Modal Srart Game ------------------------------------------->
@@ -65,7 +50,7 @@
         <div class="rules__menu">
             <div class="bc-logo"><img src="img/modals/bc_logo.png"></div>
             <div class="rules__text">
-                <p>On a game, computers write a 4-digit secret numbers. The digits all different. Then you try to guess what numbers hidden. If the matching digits are in their right positions, they are "bulls", if in different positions, they are "cows".</p>
+                <p>In this game, computer write a 4-digit secret numbers. The digits all different. Then you try to guess what numbers hidden. If the matched digits are in their right positions, they are "bulls", if they in different positions, they are "cows".</p>
                 <p>Good luck!</p>
             </div>
             <div class="rules__btn btn js-open-modal js-start" data-modal="play"><img src="img/modals/play.png"></div>

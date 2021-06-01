@@ -1,0 +1,24 @@
+@media screen and (max-width: 1024px) {
+    .game-bc__top{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .start__menu {
+        margin-top: 90px;
+        width: 300px;
+        height: 250px;
+    }
+
+    .bc-logo {
+        width: 240px;
+        height: 120px;
+    }
+
+    .btn {
+        margin-top: 7px;
+        width: 150px;
+        height: 40px;
+    }
+}
