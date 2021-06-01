@@ -329,12 +329,6 @@ body {
     color: white;
 }
 
-.number {
-    padding-left: 20px;
-    font-weight: 700;
-    font-size: 45px;
-}
-
 .lose__btn {
     margin-top: 30px;
     width: 375px;

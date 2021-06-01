@@ -2,9 +2,126 @@
     .game-bc__top{
         flex-direction: column;
     }
+
+    .bc-logo {
+        width: 275px;
+        height: 110px;
+    }
+
+    .rules__menu {
+        margin-top: 100px;
+        width: 500px;
+        height: 410px;
+    }
+
+    .rules__text{
+        width: 415px;
+        height: 190px;
+    }
+    .rules__text p{
+        font-size: 18px;
+        padding-top: 15px;
+    }
+
+    .rules__text p:nth-child(2){
+        font-size: 30px;
+        padding-top: 5px;
+    }
+
+    .rules__btn {
+        margin-top: 10px;
+        width: 200px;
+        height: 55px;
+    }
+
+    .win__menu {
+        margin-top: 100px;
+        width: 415px;
+        height: 300px;
+    }
+
+    .win__logo {
+        width: 260px;
+        height: 70px;
+    }
+
+    .win__text {
+        margin-top: 25px;
+        margin-bottom: 15px;
+        height: 40px;
+        width: 290px;
+        font-size: 20px;
+    }
+
+    .number {
+        font-size: 33px;
+    }
+
+    .win__btn {
+        margin-top: 0px;
+        width: 300px;
+        height: 75px;
+    }
+
+    .lose__menu {
+        margin-top: 100px;
+        width: 415px;
+        height: 300px;
+    }
+
+    .lose__logo {
+        width: 260px;
+        height: 70px;
+    }
+
+    .lose__text {
+        margin-top: 25px;
+        margin-bottom: 15px;
+        height: 40px;
+        width: 290px;
+        font-size: 20px;
+    }
+
+    .lose__btn {
+        margin-top: 0px;
+        width: 300px;
+        height: 75px;
+    }
+
+    .error__menu {
+        margin-top: 100px;
+        width: 670px;
+        height: 370px;
+    }
+
+    .error__text {
+        padding-top: 55px;
+        width: 550px;
+        height: 210px;
+        font-size: 23px;
+    }
+
+    .error__text-er {
+        padding-top: 10px;
+        font-size: 27px;
+    }
+
+    .error__text-ex {
+        font-size: 25px;
+        padding-top: 45px;
+    }
+
+    .error__btn {
+        margin-top: 15px;
+        width: 210px;
+        height: 65px;
+    }
 }
 
 @media screen and (max-width: 768px) {
+    .game-bc__top{
+        padding: 25px 0px 0px 0px;
+    }
     .start__menu {
         margin-top: 90px;
         width: 300px;
@@ -16,9 +133,195 @@
         height: 120px;
     }
 
+
+
     .btn {
         margin-top: 7px;
         width: 150px;
         height: 40px;
+    }
+
+    .rules__menu {
+        width: 335px;
+        height: 270px;
+    }
+
+    .bc-logo {
+        width: 175px;
+        height: 70px;
+    }
+
+    .rules__text {
+        width: 275px;
+        height: 125px;
+    }
+
+    .rules__text p {
+        font-size: 12px;
+        padding-top: 10px;
+    }
+
+    .rules__text p:nth-child(2){
+        font-size: 18px;
+        padding-top: 3px;
+    }
+
+    .rules__btn {
+        margin-top: 2px;
+    }
+
+    .lose__menu {
+        margin-top: 100px;
+        width: 335px;
+        height: 230px;
+    }
+
+    .lose__logo {
+        padding-top: 35px;
+        width: 210px;
+        height: 50px;
+    }
+
+    .lose__text {
+        height: 33px;
+    }
+
+    .lose__btn {
+        width: 195px;
+        height: 55px;
+    }
+    .win__menu {
+        margin-top: 100px;
+        width: 335px;
+        height: 230px;
+    }
+
+    .win__logo {
+        padding-top: 35px;
+        width: 210px;
+        height: 50px;
+    }
+
+    .win__text {
+        height: 33px;
+    }
+
+    .win__btn {
+        width: 195px;
+        height: 55px;
+    }
+
+    .error__menu {
+        width: 330px;
+        height: 185px;
+    }
+
+    .error__text {
+        padding: 30px 0px 0px 0px;
+        width: 270px;
+        height: 75px;
+        font-size: 23px;
+        font-size: 15px;
+    }
+
+    .error__text p {
+        width: 270px;
+    }
+
+    .error__text-er {
+        padding-top: 0px;
+        font-size: 18px;
+    }
+
+    .error__text-ex {
+        font-size: 25px;
+        padding-top: 5px;
+        font-size: 16px;
+    }
+
+    .error__btn {
+        margin-top: 30px;
+        width: 150px;
+        height: 40px;
+    }
+
+    .lines {
+        width: 335px;
+        height: 45px;
+    }
+
+    .start__btn {
+        margin-top: 40px;
+    }
+
+    .start__btn:nth-child(3) {
+        margin-top: 5px;
+    }
+
+    .turn {
+        margin-top: 10px;
+        margin-left: 14px;
+        width: 32px;
+        height: 20px;
+        font-size: 20px;
+    }
+
+    .number_all {
+        margin-top: 9px;
+        margin-left: 20px;
+        width: 75px;
+        height: 20px;
+    }
+
+    .number_all input {
+        font-size: 20px;
+    }
+
+    .bulls_all {
+        margin-top: 14px;
+        margin-left: 39px;
+        width: 26px;
+        height: 16px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cows_all {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 15px;
+        margin-left: 11px;
+        font-size: 20px;
+    }
+
+    .accept {
+        width: 65px;
+        height: 20px;
+    }
+
+    .failed {
+        font-size: 18px;
+    }
+
+    .game-bc__text {
+        width: 260px;
+        height: 25px;
+        font-size: 14px;
+    }
+
+    .game-bc__text p:nth-child(2) {
+        margin-left: 10px;
+    }
+
+    .game-bc__text p:nth-child(3) {
+        margin-left: 7px;
+    }
+
+    .play-main {
+        height: 50px;
     }
 }
