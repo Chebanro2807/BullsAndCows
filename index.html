@@ -30,8 +30,11 @@
             <p>Bulls</p>
             <p>Cows</p>
         </div>
-        <div class="bulls_and_cows_table"></div>
-        <div class="play-main btn js-open-modal js-start" data-modal="play"><img src="img/modals/play_again.png"></div>
+        <div class="bac__table"></div>
+        <div class="game-bc__buttons">
+            <div class="play-main btn js-open-modal js-start" data-modal="play"><img src="img/modals/play_again.png"></div>
+            <div class="play-rules btn js-open-modal" data-modal="rules-main"><img src="img/modals/rules.png"></div>
+        </div>
     </div>
 
     <!-- Modal Srart Game ------------------------------------------->
@@ -87,7 +90,20 @@
                 <p class="error__text-ex">Example</p>
                 <p>1234 - correct</p>
             </div>
-            <div class="error__btn btn"><img src="img/modals/continue.png"></div>
+            <div class="error__btn btn cont-js"><img src="img/modals/continue.png"></div>
+        </div>
+    </div>
+
+    <!-- Modal Rules Main ------------------------------------------->
+
+    <div class="rules-main modal js-modal" data-modal="rules-main">
+        <div class="rules__menu">
+            <div class="bc-logo"><img src="img/modals/bc_logo.png"></div>
+            <div class="rules__text">
+                <p>In this game, computer write a 4-digit secret numbers. The digits all different. Then you try to guess what numbers hidden. If the matched digits are in their right positions, they are "bulls", if they in different positions, they are "cows".</p>
+                <p>Good luck!</p>
+            </div>
+            <div class="main-rules__btn error__btn btn cont-js"><img src="img/modals/continue.png"></div>
         </div>
     </div>
 </body>

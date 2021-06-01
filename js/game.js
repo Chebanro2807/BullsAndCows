@@ -15,14 +15,18 @@ function BullsAndCows (props = {}){
     });
 
     this.error = document.querySelector('.error')
-    this.continueBtn = document.querySelector('.error__btn');
-    this.continueBtn.addEventListener('click', this.continue.bind(this))
+    this.rulesMain = document.querySelector('.rules-main')
+    this.continueBtns = document.querySelectorAll('.cont-js');
+    this.continueBtns.forEach((btn)=> {
+        btn.addEventListener('click', this.continue.bind(this));
+    })
 }
 
 //  working with modals
 
 BullsAndCows.prototype.continue = function () {
     this.error.classList.remove('is-show');
+    this.rulesMain.classList.remove('is-show');
     this.cellNumberTd.firstChild.focus();
 }
 
@@ -131,7 +135,7 @@ BullsAndCows.prototype.createField = function () {
         row.append(columnBull);
         row.append(columnCow);
         row.append(columnAccept);
-        let createTable = document.querySelector('.bulls_and_cows_table');
+        let createTable = document.querySelector('.bac__table');
         createTable.append(row);
     }
 }

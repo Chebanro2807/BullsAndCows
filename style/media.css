@@ -321,7 +321,16 @@
         margin-left: 7px;
     }
 
-    .play-main {
+    .play-main,
+    .play-rules {
         height: 50px;
+    }
+
+    .game-bc__buttons {
+        width: 335px;
+    }
+
+    .main-rules__btn {
+        margin-top: 0px;
     }
 }

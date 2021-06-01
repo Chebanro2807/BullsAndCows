@@ -21,7 +21,7 @@ body {
     height: 115px;
 }
 
-.bulls_and_cows_table {
+.bac__table {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -396,11 +396,38 @@ body {
     margin-top: 32px;
 }
 
+.game-bc__buttons {
+    display: flex;
+    margin: 0px auto;
+    width: 600px;
+}
+
+.play-main{
+    height: 65px;
+}
+
+.play-rules {
+    width: 250px;
+    height: 80px;
+}
+
+.play-rules {
+    margin-top: 10px;
+    height: 65px;
+}
+
+.rules-main {
+    transform: scale(0);
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .is-show{
     transform: scale(1);
     visibility: visible;
-}
-
-.play-main img{
-    height: 70%;
 }
